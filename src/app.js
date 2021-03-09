@@ -6,7 +6,7 @@ const geocode=require('./utils/geocode')
 const request=require('request')
 
 const app=express()
-
+const port=process.env.PORT||3000
 
 
 // define paths for  express config
@@ -84,6 +84,6 @@ app.get('*',(req,res)=>{
         errormessage:'page not found'
     });
 })
-app.listen(3000,(req,res)=>{
+app.listen(port,(req,res)=>{
     console.log('started');
 })
